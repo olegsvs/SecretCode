@@ -23,8 +23,10 @@ public class SecretCodeReceiver extends BroadcastReceiver {
         Intent activity = new Intent(context, SecretcodeActivity.class);
         activity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         activity.putExtra("secretCode", secretCode);
+        
+        if(secretCode.equals("3499"))
         context.startActivity(activity);
         
-        Toast.makeText(context, "Secret Code: " + secretCode, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context, "Secret Code: " + secretCode, Toast.LENGTH_SHORT).show();
     }
 }
